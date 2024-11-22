@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     kotlin("jvm") version "1.8.21"
     id("org.jetbrains.kotlinx.kover") version "0.7.2"
+    jacoco
     application
 }
 
@@ -16,7 +17,12 @@ repositories {
 dependencies {
     testImplementation(kotlin("test"))
 }
-
+tasks.jacocoTestReport {
+    reports {
+        xml.required.set(true)
+        xml.outputLocation.set(file(".qodana/code-coverage/report.xml"))
+    }
+}
 koverReport {
     filters {
         includes {
