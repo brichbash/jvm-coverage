@@ -1,2 +1,6 @@
 profile:
   name: qodana.recommended
+failureConditions:
+  testCoverageThresholds:
+    fresh: 99 # Fresh code coverage
+    total: 99 # Total code coverage
