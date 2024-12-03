@@ -1,2 +1,3 @@
 profile:
   name: qodana.recommended
+linter: jetbrains/qodana-jvm:latest
