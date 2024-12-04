@@ -51,3 +51,4 @@ jobs:
         with:
           pr-mode: true
           upload-result: true
+          use-nightly: true
