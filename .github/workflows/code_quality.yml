@@ -53,6 +53,6 @@ jobs:
           upload-result: true
           use-nightly: true
           args: |
-            --property=idea.log.config.file=info.xml
-            --baseline,qodana.sarif.json
+            --property=idea.log.config.file=info.xml,
+            --baseline,qodana.sarif.json,
             --apply-fixes
